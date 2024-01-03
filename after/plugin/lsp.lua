@@ -52,11 +52,18 @@ lsp_config.lua_ls.setup({
 })
 
 lsp_config.pylsp.setup({
-    on_attach = on_attach
+    on_attach = on_attach,
+    settings = {
+        pylsp = {
+            plugins = {
+                black = { enabled = true },
+                isort = { enabled = true, profile = "black" },
+            },
+        },
+    },
 })
 
 lsp_config.rust_analyzer.setup({
     on_attach = on_attach
 })
-
 
