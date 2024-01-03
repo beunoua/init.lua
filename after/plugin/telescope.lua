@@ -7,6 +7,6 @@ end)
 
 require('telescope').setup({
     defaults = {
-        file_ignore_patterns = {"env", ".git"},
+        file_ignore_patterns = {"env", ".git", "__pycache__" },
     }
 })
