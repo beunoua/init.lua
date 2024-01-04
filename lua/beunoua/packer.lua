@@ -63,11 +63,4 @@ return require('packer').startup(function(use)
 
     -- Rust
     use 'simrat39/rust-tools.nvim'
-
-    -- Debugging
-    use 'nvim-lua/plenary.nvim'
-    use 'mfussenegger/nvim-dap'
-
-    use 'jose-elias-alvarez/null-ls.nvim'
-
 end)

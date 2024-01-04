@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/laurent/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/Users/laurent/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/laurent/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/laurent/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ripgrep = {
+    loaded = true,
+    path = "/Users/laurent/.local/share/nvim/site/pack/packer/start/ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
