@@ -46,3 +46,6 @@ vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 vim.cmd("colorscheme codedark")
 
+
+-- Set file type based on extension
+vim.cmd('autocmd BufRead,BufNewFile *.cwl set filetype=yaml')
