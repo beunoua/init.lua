@@ -59,6 +59,10 @@ lsp_config.pylsp.setup({
             plugins = {
                 black = { enabled = true },
                 isort = { enabled = true, profile = "black" },
+                pylint = { enabled = true, },
+                pycodestyle = {
+                    maxLineLength=100,
+                },
             },
         },
     },
