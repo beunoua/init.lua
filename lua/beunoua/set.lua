@@ -15,9 +15,6 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- Search is case-sensitive only if search string contains an uppercase character
-vim.opt.smartcase = true
-
 -- Do not wrap lines
 vim.opt.wrap = false
 
@@ -27,6 +24,9 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+-- Search is case-sensitive only if search string contains an uppercase character
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
 
 -- Highlight search during the search, not after
 vim.opt.hlsearch = false
@@ -52,3 +52,4 @@ vim.cmd("colorscheme codedark")
 
 -- Set file type based on extension
 vim.cmd('autocmd BufRead,BufNewFile *.cwl set filetype=yaml')
+

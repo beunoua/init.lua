@@ -70,10 +70,14 @@ lsp_config.pylsp.setup({
 })
 
 lsp_config.clangd.setup({
-    on_attach = on_attach
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        vim.keymap.set("n", "<leader>gf", ":ClangdSwitchSourceHeader<CR>", {})
+    end
 })
 
 lsp_config.rust_analyzer.setup({
     on_attach = on_attach
 })
+
 
