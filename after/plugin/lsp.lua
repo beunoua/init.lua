@@ -3,6 +3,7 @@ local lsp = require('lsp-zero')
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
+        "clangd",
         "lua_ls",
         "pylsp",
         "rust_analyzer",
@@ -66,6 +67,10 @@ lsp_config.pylsp.setup({
             },
         },
     },
+})
+
+lsp_config.clangd.setup({
+    on_attach = on_attach
 })
 
 lsp_config.rust_analyzer.setup({
