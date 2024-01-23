@@ -15,6 +15,9 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+-- Search is case-sensitive only if search string contains an uppercase character
+vim.opt.smartcase = true
+
 -- Do not wrap lines
 vim.opt.wrap = false
 
