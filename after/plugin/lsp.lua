@@ -60,7 +60,7 @@ lsp_config.pylsp.setup({
             plugins = {
                 black = { enabled = true },
                 isort = { enabled = true, profile = "black" },
-                pylint = { enabled = true, },
+                pylint = { enabled = true, args = { '--init-hook="import pylint_venv; pylint_venv.inithook(force_venv_activation=True)"' } },
                 pycodestyle = {
                     maxLineLength=100,
                 },
