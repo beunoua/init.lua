@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
         "lua_ls",
         "pylsp",
         "rust_analyzer",
+        "yamlls",
     }
 })
 
@@ -60,7 +61,7 @@ lsp_config.pylsp.setup({
             plugins = {
                 black = { enabled = true },
                 isort = { enabled = true, profile = "black" },
-                pylint = { enabled = true, args = { '--init-hook="import pylint_venv; pylint_venv.inithook(force_venv_activation=True)"' } },
+                pylint = { enabled = true, },
                 pycodestyle = {
                     maxLineLength=100,
                 },
@@ -74,6 +75,10 @@ lsp_config.clangd.setup({
         on_attach(client, bufnr)
         vim.keymap.set("n", "<leader>gf", ":ClangdSwitchSourceHeader<CR>", {})
     end
+})
+
+lsp_config.yamlls.setup({
+    on_attach = on_attach
 })
 
 lsp_config.rust_analyzer.setup({
