@@ -1,11 +1,11 @@
 local lsp = require('lsp-zero')
 
-require("mason").setup()
+require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
         "clangd",
         "lua_ls",
-        "pylsp",
+        "ruff",
         "rust_analyzer",
         "yamlls",
     }
@@ -54,18 +54,10 @@ lsp_config.lua_ls.setup({
     },
 })
 
-lsp_config.pylsp.setup({
+lsp_config.ruff.setup({
     on_attach = on_attach,
-    settings = {
-        pylsp = {
-            plugins = {
-                black = { enabled = true },
-                isort = { enabled = true, profile = "black" },
-                pylint = { enabled = true, },
-                pycodestyle = {
-                    maxLineLength=100,
-                },
-            },
+    init_options = {
+        settings = {
         },
     },
 })
