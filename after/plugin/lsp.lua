@@ -58,9 +58,11 @@ lsp_config.ruff.setup({
     on_attach = on_attach,
     init_options = {
         settings = {
-        },
-    },
+          lineLength = 100
+        }
+    }
 })
+
 
 lsp_config.clangd.setup({
     on_attach = function(client, bufnr)
