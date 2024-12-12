@@ -5,6 +5,7 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         "clangd",
         "lua_ls",
+        "pylsp",
         "ruff",
         "rust_analyzer",
         "yamlls",
@@ -52,6 +53,11 @@ lsp_config.lua_ls.setup({
             },
         },
     },
+})
+
+lsp_config.pylsp.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
 })
 
 lsp_config.ruff.setup({
