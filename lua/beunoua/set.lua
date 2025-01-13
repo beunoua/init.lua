@@ -60,6 +60,6 @@ vim.cmd('autocmd BufRead,BufNewFile *.cwl set filetype=yaml')
 
 -- Set tab spacing to 2 spaces for HTML files
 vim.cmd([[
-  autocmd FileType html,htmldjango setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+  autocmd FileType html,htmldjango,css,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 ]])
 
