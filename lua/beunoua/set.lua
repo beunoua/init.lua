@@ -39,9 +39,14 @@ vim.opt.scrolloff =  8
 vim.opt.colorcolumn = "80"
 
 
+-- Displays the sign column which is used to show signs for breakpoints and errors and warnings.
 vim.opt.signcolumn = "yes"
+
+-- @ is a valid character for words
 vim.opt.isfname:append("@-@")
 
+
+-- Set the time to wait for a key code sequence to complete (ms)
 vim.opt.updatetime = 50
 
 
