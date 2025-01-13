@@ -58,3 +58,8 @@ vim.cmd("colorscheme codedark")
 -- Set file type based on extension
 vim.cmd('autocmd BufRead,BufNewFile *.cwl set filetype=yaml')
 
+-- Set tab spacing to 2 spaces for HTML files
+vim.cmd([[
+  autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+]])
+
