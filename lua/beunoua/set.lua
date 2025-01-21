@@ -33,7 +33,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Always at least 8 lines above and below the cursor
-vim.opt.scrolloff =  8
+vim.opt.scrolloff = 8
 
 -- Vertical line at 80
 vim.opt.colorcolumn = "80"
@@ -46,20 +46,31 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 
--- Set the time to wait for a key code sequence to complete (ms)
+-- Set the time to wait for a key code sequence to complete (ms).
 vim.opt.updatetime = 50
 
 
--- Nice colors
+-- Nice colors.
 vim.opt.termguicolors = true
 vim.cmd("colorscheme codedark")
 
 
--- Set file type based on extension
+-- Set file type based on extension.
 vim.cmd('autocmd BufRead,BufNewFile *.cwl set filetype=yaml')
 
--- Set tab spacing to 2 spaces for HTML files
+
+-- Set tab spacing to 2 spaces for HTML files.
 vim.cmd([[
   autocmd FileType html,htmldjango,css,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 ]])
 
+
+-- Hightlight yanked text.
+vim.api.nvim_create_autocmd('TextYankPost', {
+    group = vim.api.nvim_create_augroup('highlight_yank', {}),
+    desc = 'Hightlight selection on yank',
+    pattern = '*',
+    callback = function()
+        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 200 }
+    end,
+})
