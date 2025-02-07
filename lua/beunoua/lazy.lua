@@ -24,8 +24,8 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- codedark color scheme
-    { "tomasiser/vim-code-dark" },
+    -- catppuccin color scheme
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     -- telescope
     {

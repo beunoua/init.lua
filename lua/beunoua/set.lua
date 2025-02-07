@@ -54,7 +54,7 @@ vim.opt.updatetime = 50
 
 -- Nice colors.
 vim.opt.termguicolors = true
-vim.cmd("colorscheme codedark")
+vim.cmd("colorscheme catppuccin-mocha")
 
 
 -- Set file type based on extension.
