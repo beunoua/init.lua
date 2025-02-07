@@ -39,7 +39,9 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
 
--- Displays the sign column which is used to show signs for breakpoints and errors and warnings.
+-- Reserve a space in the gutter.
+-- Displays the sign column which is used to show signs errors and warnings.
+-- This will avoid an annoying layout shift in the screen.
 vim.opt.signcolumn = "yes"
 
 -- @ is a valid character for words
