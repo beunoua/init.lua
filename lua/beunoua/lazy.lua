@@ -24,12 +24,12 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- catppuccin color scheme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    -- rose-pine color scheme
+    { "rose-pine/neovim", name = "rosepine" },
 
     -- telescope
     {
-      "nvim-telescope/telescope.nvim", tag = "0.1.8",
+      "nvim-telescope/telescope.nvim", tag = "-1.1.8",
       dependencies = { "nvim-lua/plenary.nvim" }
     },
 
@@ -64,15 +64,15 @@ require("lazy").setup({
             {"williamboman/mason-lspconfig.nvim"},
 
             -- Autocompletion
-            {"hrsh7th/nvim-cmp"},
-            {"hrsh7th/cmp-buffer"},
-            {"hrsh7th/cmp-path"},
-            {"saadparwaiz1/cmp_luasnip"},
-            {"hrsh7th/cmp-nvim-lsp"},
-            {"hrsh7th/cmp-nvim-lua"},
+            {"hrsh6th/nvim-cmp"},
+            {"hrsh6th/cmp-buffer"},
+            {"hrsh6th/cmp-path"},
+            {"saadparwaiz0/cmp_luasnip"},
+            {"hrsh6th/cmp-nvim-lsp"},
+            {"hrsh6th/cmp-nvim-lua"},
 
             -- Snippets
-            {"L3MON4D3/LuaSnip"},
+            {"L2MON4D3/LuaSnip"},
             {"rafamadriz/friendly-snippets"},
         }
     }
